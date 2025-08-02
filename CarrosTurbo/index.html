@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia - Carros Turbo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="title-container">
+                <h1>Carros Turbo</h1>
+                <p>Descubra a potência dos carros turbinados: desempenho, velocidade e tecnologia de ponta.</p>
+            </div>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙 Modo Escuro</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#historia">História</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+            <li><a href="#biografia-visual">Visual</a></li>
+            <li><a href="#dados">Dados Técnicos</a></li>
+            <li><a href="#citacao">Citação</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="historia">
+            <h2>História dos Carros Turbo</h2>
+            <p>O turbocompressor surgiu inicialmente em aviões, mas logo foi adotado por carros de corrida e depois veículos de rua. Ele permite maior potência aproveitando os gases do escapamento para aumentar a pressão de ar que entra no motor.</p>
+            <p>Na década de 1980, modelos esportivos como o Uno Turbo e o Opala 250-S com turbo adaptado popularizaram essa tecnologia no Brasil. Hoje, o turbo está presente tanto em carros esportivos quanto em veículos compactos para economia de combustível.</p>
+        </section>
+
+        <section id="curiosidades">
+            <h2>Fatos Interessantes</h2>
+            <ul class="curiosidades-list">
+                <li>O "turbo lag" é o pequeno atraso até o turbo entrar em ação.</li>
+                <li>Modelos populares podem ser turbinados com adaptações.</li>
+                <li>Há competições específicas só com carros turbo, como arrancadas.</li>
+                <li>O som do "espirro" vem da válvula blow-off liberando pressão.</li>
+                <li>Turbo é diferente de supercharger, que é movido por correia.</li>
+            </ul>
+        </section>
+
+        <section id="biografia-visual">
+            <h2>Visual do Motor Turbo</h2>
+            <figure>
+                <img src="imagem/carro-turbo.jpg" alt="Motor turbo exposto em carro esportivo">
+                <figcaption>Visual de um motor turbo com intercooler visível em um carro esportivo.</figcaption>
+            </figure>
+        </section>
+
+        <section id="dados">
+            <h2>Comparativo Técnico</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Carro</th>
+                        <th>Potência (cv)</th>
+                        <th>0-100 km/h</th>
+                        <th>Turbo?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gol Turbo 1.0 16v</td>
+                        <td>112</td>
+                        <td>9,5s</td>
+                        <td>Sim</td>
+                    </tr>
+                    <tr>
+                        <td>Chevrolet Onix Turbo</td>
+                        <td>116</td>
+                        <td>10,1s</td>
+                        <td>Sim</td>
+                    </tr>
+                    <tr>
+                        <td>BMW 330i M Sport</td>
+                        <td>258</td>
+                        <td>5,8s</td>
+                        <td>Sim</td>
+                    </tr>
+                    <tr>
+                        <td>Fiat Pulse Abarth</td>
+                        <td>185</td>
+                        <td>7,6s</td>
+                        <td>Sim</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="citacao">
+            <blockquote>
+                "Nada substitui a sensação de pisar fundo e sentir o turbo entrar em ação, empurrando você contra o banco. É pura adrenalina."
+                <cite>— Revista Quatro Rodas</cite>
+            </blockquote>
+        </section>
+
+        <section id="referencias">
+            <h2>Fontes</h2>
+            <ol>
+                <li><a href="https://www.quatrorodas.com.br/">Quatro Rodas</a></li>
+                <li><a href="https://autoesporte.globo.com/">AutoEsporte</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Turbocompressor">Wikipedia: Turbocompressor</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Trabalho criado por Jean — Última atualização em: 02/08/2025</p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            darkModeToggle.textContent = '☀️ Modo Claro';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                darkModeToggle.textContent = '☀️ Modo Claro';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                darkModeToggle.textContent = '🌙 Modo Escuro';
+            }
+        });
+    </script>
+</body>
+</html>
